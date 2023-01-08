@@ -10,86 +10,138 @@
         layout="@layout/toolbar"
         android:id="@+id/toolbar"/>
 
-    <LinearLayout
+
+    <Button
+        android:id="@+id/btn_input_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="140dp"
+        android:gravity="center"
+        android:text="@string/input_date"
+        app:layout_constraintEnd_toStartOf="@+id/nowdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:textSize="35.00sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="D-day" />
+
+    <TextView
+        android:id="@+id/nowdate"
+        android:layout_width="126dp"
+        android:layout_height="46dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="현재 날짜"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="20dp"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
 
-        <TextView
-            android:id="@+id/nowdate"
-            android:layout_width="126dp"
-            android:layout_height="46dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="80dp"
-            android:gravity="center"
-            android:text="현재 시간" />
+    <TextView
+        android:id="@+id/click_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
-        <CalendarView
-            android:id="@+id/cal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+    <EditText
+        android:id="@+id/contextEditText"
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="내용을 입력하세요."
+        android:inputType="textMultiLine"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/click_date"
+        app:layout_constraintStart_toStartOf="@+id/click_date"
+        app:layout_constraintTop_toBottomOf="@+id/click_date" />
 
-        <TextView
-            android:id="@+id/contents"
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:layout_marginTop="10dp"
-            android:text="contents" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="달력"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/color1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/contextEditText"
-            android:layout_width="375dp"
-            android:layout_height="66dp"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:hint="내용을 입력하세요."
-            android:inputType="textMultiLine"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
-
-        <Button
-            android:id="@+id/save"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="20dp"
-            android:text="저장"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
-
-        <Button
-            android:text="수정"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/change"
-            app:layout_constraintBaseline_toBaselineOf="@+id/save" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/del" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" android:visibility="invisible"/>
-
-        <Button
-            android:id="@+id/del"
-            android:layout_width="176dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:text="삭제"
-            android:visibility="invisible"
-            app:layout_constraintBaseline_toBaselineOf="@+id/change"
-            app:layout_constraintEnd_toEndOf="@+id/save"></Button>
+    <Button
+        android:id="@+id/save_Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="저장"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
 
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/cha_Btn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="수정"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/save_Btn"
+        app:layout_constraintEnd_toStartOf="@+id/del_Btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/del_Btn"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="삭제"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
+        app:layout_constraintEnd_toEndOf="@+id/save_Btn"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">terid_off</string>
+
+    <string name="input_date">D-day 입력</string>
 </resources>
