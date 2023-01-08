@@ -24,7 +24,7 @@
         android:id="@+id/btn_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="40dp"
         android:text="설정"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,14 +44,15 @@
 
     <ImageButton
         android:id="@+id/btn_mypage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="80dp"
         android:contentDescription="Mypage"
         android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/transparent"
         app:srcCompat="@drawable/user" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
