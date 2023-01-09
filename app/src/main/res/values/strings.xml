@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">terid_off</string>
+    <string name="register">TERID 회원가입</string>
 
     <string name="input_date">D-day 입력</string>
+    <string name="prefLoginState">loginstate</string>
 </resources>
