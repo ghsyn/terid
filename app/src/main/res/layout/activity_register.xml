@@ -8,12 +8,12 @@
     tools:context=".RegisterActivity">
 
     <ImageView
-        android:layout_width="600dp"
-        android:layout_height="220dp"
+        android:layout_width="290dp"
+        android:layout_height="175dp"
         app:srcCompat="@drawable/register"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-95dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/register_id"
