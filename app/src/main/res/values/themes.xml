@@ -17,4 +17,18 @@
         parent="Theme.AppCompat.Light">
         <item name="android:background">@color/teal_200</item>
     </style>
+    <style name="CalenderViewCustom" parent="Theme.AppCompat">
+        <item name="colorAccent">@color/color3</item>
+        <item name="colorPrimary">@color/color2</item>
+        <item name="android:textColorPrimary">@color/color1</item>
+    </style>
+
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/color1</item>
+        <item name="android:weekNumberColor">@color/color1</item>
+    </style>
+
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/color2</item>
+    </style>
 </resources>

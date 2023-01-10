@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/buttonround.xml" value="0.2225" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/buttonselector.xml" value="0.2155" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/dictionary_xml.xml" value="0.2285" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/file_xml.xml" value="0.2285" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/solve_xml.xml" value="0.2285" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/textround.xml" value="0.2155" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/ybm_xml.xml" value="0.2285" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_my_page.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_register.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_user.xml" value="0.12335359675785208" />
         <entry key="..\:/Users/swans/AndroidStudioProjects/Terid_off/app/src/main/res/layout/activity_login.xml" value="0.1578125" />
         <entry key="..\:/Users/swans/AndroidStudioProjects/Terid_off/app/src/main/res/layout/activity_main.xml" value="0.15942028985507245" />
         <entry key="..\:/Users/swans/AndroidStudioProjects/Terid_off/app/src/main/res/layout/activity_register.xml" value="0.264" />

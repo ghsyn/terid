@@ -4,55 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/another"
     tools:context=".MainActivity">
 
-    <include
-        layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="45dp"
+        android:text="Nickname"
+        android:textColor="@color/color1"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/mypage_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="40dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Mypage"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/TodayText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="40dp"
-        android:text="설정"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="40dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/textround"
+        android:text="Victory belong to the most persevering\n_ Napoleon Bonaparte"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/btn_logout"
+        android:id="@+id/engnote_page"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/buttonselector"
+        android:drawableEnd="@drawable/file_xml"
+        android:text="자료노트"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/dictionary_page"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/dictionary_page"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/buttonselector"
+        android:drawableEnd="@drawable/dictionary_xml"
+        android:text="단어 검색"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="224dp" />
+
+    <Button
+        android:id="@+id/example_page"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/buttonselector"
+        android:drawableEnd="@drawable/solve_xml"
+        android:text="문제풀이"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ybm_link"
+        app:layout_constraintTop_toBottomOf="@+id/engnote_page"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/ybm_link"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonselector"
+        android:drawableEnd="@drawable/ybm_xml"
+        android:text="YBM연결"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/dictionary_page"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="224dp" />
+
+    <Button
+        android:id="@+id/logout_btn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="302dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="17dp"
-        android:text="로그아웃"
+        android:layout_height="40dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/another"
+        android:text="sign out"
+        android:textColor="@color/Gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btn_mypage"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:contentDescription="Mypage"
-        android:scaleType="fitCenter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@android:color/transparent"
-        app:srcCompat="@drawable/user" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
