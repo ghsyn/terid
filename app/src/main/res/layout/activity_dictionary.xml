@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".DictionaryActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="단어 검색"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="313dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

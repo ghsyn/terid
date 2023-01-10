@@ -7,12 +7,35 @@
     android:background="@color/another"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:srcCompat="@drawable/teridlogo"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="40dp"
+        android:text="TERID"
+        android:textColor="@color/color1"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="60dp"
         android:text="Nickname"
         android:textColor="@color/color1"
         android:textSize="25sp"
@@ -23,10 +46,10 @@
 
     <ImageButton
         android:id="@+id/mypage_btn"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
         android:background="@android:color/transparent"
         android:contentDescription="Mypage"
         android:scaleType="fitCenter"
@@ -34,10 +57,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:text="My Plan"
+        android:textColor="@color/color1"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
     </FrameLayout>
 
     <TextView
@@ -62,13 +101,14 @@
         android:id="@+id/engnote_page"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginStart="40dp"
         android:background="@drawable/buttonselector"
-        android:drawableEnd="@drawable/file_xml"
         android:text="자료노트"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/dictionary_page"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
         tools:ignore="MissingConstraints" />
 
@@ -76,14 +116,14 @@
         android:id="@+id/dictionary_page"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/buttonselector"
-        android:drawableEnd="@drawable/dictionary_xml"
         android:text="단어 검색"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="224dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/example_page"
@@ -91,11 +131,12 @@
         android:layout_height="150dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginStart="40dp"
         android:background="@drawable/buttonselector"
-        android:drawableEnd="@drawable/solve_xml"
         android:text="문제풀이"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/ybm_link"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/engnote_page"
         tools:ignore="MissingConstraints" />
 
@@ -104,20 +145,20 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/buttonselector"
-        android:drawableEnd="@drawable/ybm_xml"
         android:text="YBM연결"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dictionary_page"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="224dp" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/logout_btn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="300dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
         android:background="@color/another"
         android:text="sign out"

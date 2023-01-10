@@ -8,6 +8,7 @@
     tools:context=".RegisterActivity">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="218dp"
         app:srcCompat="@drawable/register"
@@ -19,13 +20,16 @@
         android:id="@+id/register_id"
         android:layout_width="133dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
         android:ems="10"
         android:hint="ID"
         android:inputType="textPersonName"
         android:textColor="@color/color2"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="232dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toTopOf="@+id/register_name"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="103dp" />
 
     <EditText
         android:id="@+id/register_name"
@@ -70,14 +74,18 @@
         android:id="@+id/idck_btn"
         android:layout_width="70dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/color1"
         android:text="Check Avail"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="243dp"
-        tools:layout_editor_absoluteY="232dp" />
+        app:layout_constraintBottom_toTopOf="@+id/register_name"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="243dp" />
 
     <Button
         android:id="@+id/register_btn"

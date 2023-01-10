@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/drawable/dictionary_xml.xml" value="0.2985" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/drawable/ybm_xml.xml" value="0.2985" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_dictionary.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_engnote.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_example.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_login.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/activity_user.xml" value="0.2509057971014493" />
+        <entry key="..\:/Users/Anyone/AndroidStudioProjects/Terid2/app/src/main/res/layout/toolbar.xml" value="0.2509057971014493" />
         <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/buttonround.xml" value="0.2225" />
         <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/buttonselector.xml" value="0.2155" />
         <entry key="..\:/Users/swans/AndroidStudioProjects/Terid2/app/src/main/res/drawable/dictionary_xml.xml" value="0.2285" />

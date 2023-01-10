@@ -13,9 +13,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton mypage_btn, logout_btn;
+    private ImageButton mypage_btn;
     private TextView nickname;
-    private Button engnote_page, dictionary_page, example_page, ybm_link;
+    private Button logout_btn, engnote_page, dictionary_page, example_page, ybm_link;
     private Toast toast;
     private long backKeyPressedTime = 0;
     long now = System.currentTimeMillis();
