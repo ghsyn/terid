@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,11 +12,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.net.URL;
+
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton mypage_btn;
+    private ImageButton mypage_btn, engnote_page, dictionary_page, example_page, ybm_link;
     private TextView nickname;
-    private Button logout_btn, engnote_page, dictionary_page, example_page, ybm_link;
+    private Button logout_btn;
     private Toast toast;
     private long backKeyPressedTime = 0;
     long now = System.currentTimeMillis();
@@ -95,6 +98,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), DictionaryActivity.class);
                 startActivity(intent);
                 intent.putExtra("userName", userName);
+            }
+        });
+
+        ybm_link = findViewById(R.id.ybm_link);
+        ybm_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("http://m.exam.toeic.co.kr/");
+                Intent intent  = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
             }
         });
     }

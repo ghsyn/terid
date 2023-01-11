@@ -15,7 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
         app:srcCompat="@drawable/teridlogo"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="TODO" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -97,39 +98,47 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/engnote_page"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginStart="40dp"
         android:background="@drawable/buttonselector"
         android:text="자료노트"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/dictionary_page"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/file_btn"
+        android:scaleType="fitCenter"
+        android:contentDescription="TODO"
+        android:elevation="10dp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/dictionary_page"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/buttonselector"
+        android:scaleType="fitCenter"
         android:text="단어 검색"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/dictionary_btn"
+        android:contentDescription="TODO"
+        android:elevation="10dp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/example_page"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginStart="40dp"
         android:background="@drawable/buttonselector"
@@ -138,20 +147,28 @@
         app:layout_constraintEnd_toStartOf="@+id/ybm_link"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/engnote_page"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/solve_btn"
+        android:scaleType="fitCenter"
+        android:contentDescription="TODO"
+        android:elevation="10dp"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/ybm_link"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/buttonselector"
         android:text="YBM연결"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dictionary_page"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:src="@drawable/ybm_btn"
+        android:scaleType="fitCenter"
+        android:contentDescription="TODO"
+        android:elevation="10dp"/>
 
     <Button
         android:id="@+id/logout_btn"

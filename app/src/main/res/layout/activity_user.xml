@@ -7,6 +7,67 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <Button
+        android:id="@+id/btn_input_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="D-day 입력"
+        android:textColor="@color/color1"
+        android:background="@color/color3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_study"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_study"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="공부 시작"
+        android:textColor="@color/color2"
+        android:background="@color/color3"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_study"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="공부한 날짜"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_Dday"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Dday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:textSize="35.00sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="D-day" />
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="wrap_content"
@@ -14,7 +75,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="8dp"
-
         android:theme="@style/CalenderViewCustom"
         android:dateTextAppearance="@style/CalenderViewDateCustomText"
         android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
@@ -28,13 +88,14 @@
         android:layout_width="238dp"
         android:layout_height="25dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="436dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/contextEditText"
@@ -140,13 +201,13 @@
         android:id="@+id/nowdate"
         android:layout_width="100dp"
         android:layout_height="27dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="24dp"
         android:text="Today"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.099" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
