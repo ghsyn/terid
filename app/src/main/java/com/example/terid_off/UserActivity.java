@@ -26,13 +26,12 @@ import java.util.Locale;
 
 
 
-public class UserActivity extends AppCompatActivity
-{
+public class UserActivity extends AppCompatActivity {
     public String readDay = null;
     public String str = null;
     public CalendarView calendarView;
     public Button cha_Btn, del_Btn, save_Btn;
-    public TextView diaryTextView, textView2, textView3, nowdate;
+    public TextView diaryTextView, textView2, textView3;
     public EditText contextEditText;
 
     private Toolbar toolbar;
@@ -61,8 +60,7 @@ public class UserActivity extends AppCompatActivity
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
@@ -99,15 +97,10 @@ public class UserActivity extends AppCompatActivity
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
         contextEditText = findViewById(R.id.contextEditText);
-        nowdate = findViewById(R.id.nowdate);
 
-        nowdate.setText(getTime());
-
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener()
-        {
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth)
-            {
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 diaryTextView.setVisibility(View.VISIBLE);
                 save_Btn.setVisibility(View.VISIBLE);
                 contextEditText.setVisibility(View.VISIBLE);
@@ -119,11 +112,9 @@ public class UserActivity extends AppCompatActivity
                 checkDay(year, month, dayOfMonth);
             }
         });
-        save_Btn.setOnClickListener(new View.OnClickListener()
-        {
+        save_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 saveDiary(readDay);
                 str = contextEditText.getText().toString();
                 textView2.setText(str);
@@ -135,46 +126,53 @@ public class UserActivity extends AppCompatActivity
 
             }
         });
+        // Input date click 시 date picker 호출 - Dday
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View a_view) {
+                final int year = mCalendar.get(Calendar.YEAR);
+                final int month = mCalendar.get(Calendar.MONTH);
+                final int day = mCalendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(UserActivity.this, mDateSetListener, year, month, day);
+                dialog.show();
+            }
+
+        };
+
+        findViewById(R.id.btn_input_date).
+
+                setOnClickListener(clickListener);
+
+        // Input date click 시 date picker 호출 - Study
+        View.OnClickListener clickListener_s = new View.OnClickListener() {
+            @Override
+            public void onClick(View a_view) {
+                final int year = sCalendar.get(Calendar.YEAR);
+                final int month = sCalendar.get(Calendar.MONTH);
+                final int day = sCalendar.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog_s = new DatePickerDialog(UserActivity.this, sDateSetListener, year, month, day);
+
+                // 현재 날짜만 선택하게 고정
+                dialog_s.getDatePicker().setMinDate(sCalendar.getTime().getTime());
+                dialog_s.getDatePicker().setMaxDate(sCalendar.getTimeInMillis());
+
+                btn_study.setEnabled(false);
+                tv_study.setVisibility(View.VISIBLE);
+                btn_study.setVisibility(View.INVISIBLE);
+                dialog_s.show();
+
+            }
+        };
+
+        findViewById(R.id.btn_study).
+
+                setOnClickListener(clickListener_s);
     }
 
-    // Input date click 시 date picker 호출 - Dday
-    View.OnClickListener clickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View a_view) {
-            final int year = mCalendar.get(Calendar.YEAR);
-            final int month = mCalendar.get(Calendar.MONTH);
-            final int day = mCalendar.get(Calendar.DAY_OF_MONTH);
 
-            DatePickerDialog dialog = new DatePickerDialog(UserActivity.this, mDateSetListener, year, month, day);
-            dialog.show();
-        }
-    };
-    findViewById(R.id.btn_input_date).setOnClickListener(clickListener);
 
-    // Input date click 시 date picker 호출 - Study
-    View.OnClickListener clickListener_s = new View.OnClickListener() {
-        @Override
-        public void onClick(View a_view) {
-            final int year = sCalendar.get(Calendar.YEAR);
-            final int month = sCalendar.get(Calendar.MONTH);
-            final int day = sCalendar.get(Calendar.DAY_OF_MONTH);
-
-            DatePickerDialog dialog_s = new DatePickerDialog(UserActivity.this, sDateSetListener, year, month, day);
-
-            // 현재 날짜만 선택하게 고정
-            dialog_s.getDatePicker().setMinDate(sCalendar.getTime().getTime());
-            dialog_s.getDatePicker().setMaxDate(sCalendar.getTimeInMillis());
-
-            btn_study.setEnabled(false);
-            tv_study.setVisibility(View.VISIBLE);
-            btn_study.setVisibility(View.INVISIBLE);
-            dialog_s.show();
-
-        }
-    };
-    findViewById(R.id.btn_study).setOnClickListener(clickListener_s);
-
-}
 
     // Toolbar back button 설정
     @Override
@@ -345,7 +343,7 @@ public class UserActivity extends AppCompatActivity
         final String strFormat;
         if (result <= 0) {
             result = result * -1 + 1;
-            strFormat = "공부한 지 %d 일";
+            strFormat = "공부한 지\n%d 일";
         }
         else {
             strFormat = "오류입니다.";

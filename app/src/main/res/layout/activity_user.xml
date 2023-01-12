@@ -29,7 +29,7 @@
         android:id="@+id/btn_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
+        android:layout_marginStart="290dp"
         android:layout_marginTop="70dp"
         android:gravity="center"
         android:text="공부 시작"
@@ -43,8 +43,8 @@
         android:id="@+id/tv_study"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:text="공부한 날짜"
         android:textSize="20dp"
@@ -66,7 +66,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="D-day" />
+        tools:text="D - day" />
 
     <CalendarView
         android:id="@+id/calendarView"
@@ -197,17 +197,6 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/cha_Btn"
         app:layout_constraintEnd_toEndOf="@+id/save_Btn"/>
 
-    <TextView
-        android:id="@+id/nowdate"
-        android:layout_width="100dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="24dp"
-        android:text="Today"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
